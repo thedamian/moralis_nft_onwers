@@ -9,7 +9,9 @@ const appId = moralisApiID;
 Moralis.start({ serverUrl, appId });
 
 (async ()=> {
-const options = { address: "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d", chain: "eth" };
+
+const NFTTokenAddress = "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d";
+const options = { address: NFTTokenAddress, chain: "eth" };
 const nftOwners = await Moralis.Web3API.token.getNFTOwners(options);
 console.log(nftOwners)
 })();
